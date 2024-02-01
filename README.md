@@ -1,6 +1,10 @@
 # HotelApi
 
-Ce projet est une API CRUD pour un projet scolaire dans le but de créer une API pour un hôtel factice
+Ce projet est une API CRUD pour un projet scolaire dans le but de créer une API pour un hôtel factice.
+
+## Stack 
+- Javascript (Node.js)
+- Express.js (Controller, service, router, ...)
 
 ## Installation
 
