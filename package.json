@@ -1,0 +1,15 @@
+{
+  "name": "hotelapi",
+  "version": "1.0.0",
+  "description": "Une API permettant à un hôtel de gérer ses clients et son établissement",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Louis F.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
