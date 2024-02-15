@@ -28,7 +28,6 @@ class Hotel {
 
   updateClient(clientId, updatedClient) {
     const index = this.clientsData.clients.findIndex((client) => client.id === parseInt(clientId));
-    console.log(index);
 
     if (index !== -1) {
       this.clientsData.clients[index] = { ...this.clientsData.clients[index], ...updatedClient };
@@ -36,15 +35,12 @@ class Hotel {
       return this.clientsData.clients[index];
     }
 
-    return null; // Client non trouvé
+    return null;
   }
 
   findReservation(roomId) {
     return this.hotelData.rooms.find((room) => room.id === parseInt(roomId));
   }
-
-  // Méthodes pour manipuler les données de l'hôtel
-  // ...
 
   loadClientsData() {
     try {
@@ -100,11 +96,14 @@ class HotelService {
   updateClient(clientId, updatedClient) {
     return this.hotel.updateClient(clientId, updatedClient);
   }
-  createClientReservation(roomId) {
+  getClientReservation(roomId) {
     return this.hotel.findReservation(roomId);
   }
+  createClientReservation(roomId) {
+    return this.getClientReservation(roomId);
+  }
   deleteClientReservation(roomId) {
-    return this.hotel.findReservation(roomId);
+    return this.getClientReservation(roomId);
   }
 }
 

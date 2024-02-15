@@ -57,11 +57,15 @@ class ClientService {
   getHotelChambreById(roomId) {
     return this.hotel.getChambreById(roomId);
   }
-  createReservation(roomId) {
+  //Méthode pour trouver une réservation mais en vrai ça cherche si la chambre existe bien
+  getReservation(roomId) {
     return this.hotel.findReservation(roomId);
   }
+  createReservation(roomId) {
+    return this.getReservation(roomId);
+  }
   deleteReservation(roomId) {
-    return this.hotel.findReservation(roomId);
+    return this.getReservation(roomId);
   }
 }
 
