@@ -12,5 +12,5 @@ router.get("/hotel/chambres/:roomId", clientController.getHotelChambreById());
 //Réservation d'une chambre :
 router.post("/reservation", clientController.createReservation());
 //Annulation (supprimer) de la réservation :
-router.delete("/reservation/:id", clientController.deleteReservation());
+router.delete("/reservation/:id", clientController.deleteClientReservation());
 
